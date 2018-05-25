@@ -50,6 +50,8 @@ public class Principal extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        mostrar_q = new javax.swing.JTextField();
+        m_area = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -202,15 +204,45 @@ public class Principal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Perfil", jPanel1);
 
+        mostrar_q.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mostrar_qMouseClicked(evt);
+            }
+        });
+        mostrar_q.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mostrar_qActionPerformed(evt);
+            }
+        });
+
+        m_area.setText("Mostrar");
+        m_area.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                m_areaMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 744, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(mostrar_q)
+                .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(326, 326, 326)
+                .addComponent(m_area)
+                .addContainerGap(341, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 560, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(mostrar_q, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(m_area)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("VIsualizar", jPanel2);
@@ -428,6 +460,18 @@ public class Principal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void mostrar_qActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrar_qActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mostrar_qActionPerformed
+
+    private void mostrar_qMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mostrar_qMouseClicked
+       
+    }//GEN-LAST:event_mostrar_qMouseClicked
+
+    private void m_areaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_m_areaMouseClicked
+        mostrar_q.setText("ole");
+    }//GEN-LAST:event_m_areaMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -484,6 +528,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JDialog jd_logeado;
     private javax.swing.JDialog jd_registrar;
+    private javax.swing.JButton m_area;
+    private javax.swing.JTextField mostrar_q;
     private javax.swing.JTextField r_clasesbb;
     private javax.swing.JTextField r_contra;
     private javax.swing.JTextField r_correo;
