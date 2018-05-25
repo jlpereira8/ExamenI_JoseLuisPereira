@@ -49,6 +49,11 @@ public class Principal extends javax.swing.JFrame {
         jd_logeado = new javax.swing.JDialog();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        m_perfil = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        user_show = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         mostrar_q = new javax.swing.JTextField();
         m_area = new javax.swing.JButton();
@@ -191,15 +196,59 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(121, Short.MAX_VALUE))
         );
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        m_perfil.setText("Mostrar");
+        m_perfil.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                m_perfilMouseClicked(evt);
+            }
+        });
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel10.setText("Usuario : ");
+
+        user_show.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                user_showActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 744, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(307, 307, 307)
+                        .addComponent(m_perfil)
+                        .addGap(0, 348, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(user_show, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 560, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(user_show, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(m_perfil)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Perfil", jPanel1);
@@ -469,8 +518,20 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_mostrar_qMouseClicked
 
     private void m_areaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_m_areaMouseClicked
-        mostrar_q.setText("ole");
+        //mostar clases
+       // mostrar_q.setText("ole");
     }//GEN-LAST:event_m_areaMouseClicked
+
+    private void m_perfilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_m_perfilMouseClicked
+        //mostar perfil
+        //mostrar_q.setText(r_usuario.getText());
+         user_show.setText(r_usuario.getText());
+        
+    }//GEN-LAST:event_m_perfilMouseClicked
+
+    private void user_showActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_user_showActionPerformed
+        user_show.setText(r_usuario.getText());
+    }//GEN-LAST:event_user_showActionPerformed
 
     /**
      * @param args the command line arguments
@@ -514,6 +575,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -525,10 +587,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JDialog jd_logeado;
     private javax.swing.JDialog jd_registrar;
     private javax.swing.JButton m_area;
+    private javax.swing.JButton m_perfil;
     private javax.swing.JTextField mostrar_q;
     private javax.swing.JTextField r_clasesbb;
     private javax.swing.JTextField r_contra;
@@ -537,6 +602,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField r_nom;
     private javax.swing.JTextField r_usuario;
     private javax.swing.JButton registrar;
+    private javax.swing.JTextField user_show;
     // End of variables declaration//GEN-END:variables
 ArrayList<Usuario> lista = new ArrayList();
  
