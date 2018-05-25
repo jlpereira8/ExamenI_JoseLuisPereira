@@ -6,13 +6,13 @@ import java.util.ArrayList;
 public class projectos {
     //clases, métodos y/o atributos.
     private String clase;
-    private ArrayList<String> metodo;
-    private ArrayList<String> atributos;
+    private String metodo;
+    private String atributos;
 
     public projectos() {
     }
 
-    public projectos(String clase, ArrayList<String> metodo, ArrayList<String> atributos) {
+    public projectos(String clase, String metodo, String atributos) {
         this.clase = clase;
         this.metodo = metodo;
         this.atributos = atributos;
@@ -26,19 +26,19 @@ public class projectos {
         this.clase = clase;
     }
 
-    public ArrayList<String> getMetodo() {
+    public String getMetodo() {
         return metodo;
     }
 
-    public void setMetodo(ArrayList<String> metodo) {
+    public void setMetodo(String metodo) {
         this.metodo = metodo;
     }
 
-    public ArrayList<String> getAtributos() {
+    public String getAtributos() {
         return atributos;
     }
 
-    public void setAtributos(ArrayList<String> atributos) {
+    public void setAtributos(String atributos) {
         this.atributos = atributos;
     }
 

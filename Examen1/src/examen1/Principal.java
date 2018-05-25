@@ -50,7 +50,7 @@ public class Principal extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        shoe = new javax.swing.JTextArea();
         m_perfil = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         user_show = new javax.swing.JTextField();
@@ -200,9 +200,9 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(121, Short.MAX_VALUE))
         );
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        shoe.setColumns(20);
+        shoe.setRows(5);
+        jScrollPane1.setViewportView(shoe);
 
         m_perfil.setText("Mostrar");
         m_perfil.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -579,6 +579,7 @@ public class Principal extends javax.swing.JFrame {
         //mostar perfil
         //mostrar_q.setText(r_usuario.getText());
          user_show.setText(r_usuario.getText());
+         shoe.setText(lista.toString());
          
       
         
@@ -631,16 +632,27 @@ public class Principal extends javax.swing.JFrame {
             for (projectos c : clas) {
                 if (tokens4[3].equals(c.getClase())){
                     String se=tokens4[4]+" "+tokens4[5];
-                    c.setClase(se);
+                    c.setAtributos(se);
                 }
             }
             mostrar_q.setText(clas.toString());
-        }else if(comp.equals("Modify Atribute from")){
+      /*  
+        Add Atribute to Perro (String Name)
+	Modify Atribute from Perro (String Name to int Age)
+	Delete Atribute from Perro (int Age)
+        */
+        }else if(comp.contains("Modify Atribute from")){
              String tokens5[]=ta_piz.getText().split(" ");
-             int pos4=clas.indexOf(tokens5[4]);
-             clas.get(pos4).getAtributos().remove(tokens5[6]);
-             clas.get(pos4).getAtributos().add(tokens5[9]);
+             for (projectos c : clas) {
+                if (tokens5[3].equals(c.getAtributos())){
+                    String se="("+tokens5[8]+" "+tokens5[9];
+                    c.setAtributos(se);
+                }
+            }
+             //clas.get(pos4).getAtributos().remove(tokens5[6]);
+             //clas.get(pos4).getAtributos().add(tokens5[9]);
         }
+        mostrar_q.setText(clas.toString());
     }//GEN-LAST:event_Save_oMouseClicked
 
     private void LimpiarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LimpiarMouseClicked
@@ -704,7 +716,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JDialog jd_logeado;
     private javax.swing.JDialog jd_registrar;
     private javax.swing.JButton m_area;
@@ -717,6 +728,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField r_nom;
     private javax.swing.JTextField r_usuario;
     private javax.swing.JButton registrar;
+    private javax.swing.JTextArea shoe;
     private javax.swing.JTextField ta_piz;
     private javax.swing.JTextField user_show;
     // End of variables declaration//GEN-END:variables
