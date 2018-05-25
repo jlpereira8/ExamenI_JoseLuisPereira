@@ -5,24 +5,24 @@ import java.util.ArrayList;
 
 public class projectos {
     //clases, métodos y/o atributos.
-    private ArrayList<String> clase;
+    private String clase;
     private ArrayList<String> metodo;
     private ArrayList<String> atributos;
 
     public projectos() {
     }
 
-    public projectos(ArrayList<String> clase, ArrayList<String> metodo, ArrayList<String> atributos) {
+    public projectos(String clase, ArrayList<String> metodo, ArrayList<String> atributos) {
         this.clase = clase;
         this.metodo = metodo;
         this.atributos = atributos;
     }
 
-    public ArrayList<String> getClase() {
+    public String getClase() {
         return clase;
     }
 
-    public void setClase(ArrayList<String> clase) {
+    public void setClase(String clase) {
         this.clase = clase;
     }
 
@@ -44,7 +44,7 @@ public class projectos {
 
     @Override
     public String toString() {
-        return "projectos{" + "clases=" + clase + ", metodos=" + metodo + ", atributos=" + atributos + '}';
+        return "projectos{" + "clase=" + clase + ", metodos=" + metodo + ", atributos=" + atributos +'}';
     }
 
     
