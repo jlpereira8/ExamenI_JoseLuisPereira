@@ -646,13 +646,21 @@ public class Principal extends javax.swing.JFrame {
              for (projectos c : clas) {
                 if (tokens5[3].equals(c.getClase())){
                     String se="("+tokens5[8]+" "+tokens5[9];
-                    c.setAtributos(se);
+                    c.setAtributos(se);  
                 }
             }
              //clas.get(pos4).getAtributos().remove(tokens5[6]);
              //clas.get(pos4).getAtributos().add(tokens5[9]);
              mostrar_q.setText(clas.toString());
-        }
+        }else if (comp.contains("Delete Atribute from")){
+             String tokens6[]=ta_piz.getText().split(" ");
+             for (projectos c : clas) {
+                if (tokens6[3].equals(c.getClase())){
+                    clas.remove(c);
+                }
+            
+            
+        
         
     }//GEN-LAST:event_Save_oMouseClicked
 
