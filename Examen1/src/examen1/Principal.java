@@ -642,10 +642,10 @@ public class Principal extends javax.swing.JFrame {
 	Delete Atribute from Perro (int Age)
         */
         }else if(comp.contains("Modify Atribute from")){
-             String tokens5[]=ta_piz.getText().split(" ");
+             String tokens54[]=ta_piz.getText().split(" ");
              for (projectos c : clas) {
-                if (tokens5[3].equals(c.getClase())){
-                    String se="("+tokens5[8]+" "+tokens5[9];
+                if (tokens54[3].equals(c.getClase())){
+                    String se=tokens54[8]+" "+tokens54[9];
                     c.setAtributos(se);  
                 }
             }
@@ -661,7 +661,8 @@ public class Principal extends javax.swing.JFrame {
             
             
         
-        
+             }
+        }
     }//GEN-LAST:event_Save_oMouseClicked
 
     private void LimpiarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LimpiarMouseClicked
