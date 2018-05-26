@@ -645,8 +645,8 @@ public class Principal extends javax.swing.JFrame {
              String tokens54[]=ta_piz.getText().split(" ");
              for (projectos c : clas) {
                 if (tokens54[3].equals(c.getClase())){
-                    String se=tokens54[8]+" "+tokens54[9];
-                    c.setAtributos(se);  
+                    String seda="("+tokens54[7]+" "+tokens54[8];
+                    c.setAtributos(seda);
                 }
             }
              //clas.get(pos4).getAtributos().remove(tokens5[6]);
