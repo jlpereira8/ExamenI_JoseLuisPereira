@@ -662,7 +662,59 @@ public class Principal extends javax.swing.JFrame {
             
         
              }
+        mostrar_q.setText(clas.toString());
         }
+        /*
+        Add Method (public void Addition) to Perro
+◦	Add Atribute to Method Addition (int x) to class perro
+◦	Modify Atribute from Method Addition 5(int x to int y)9 from class perro
+◦	Delete Atribute from Method Addition (int y) from class perro
+◦	Modify Method (publc void Addition to public void Multiplication) from class perro
+◦	Add body to Method Multiplication (Cuerpo del metodo aquí) to class perro
+◦	Add constructor to class Perro
+◦	Add empty constructor to class Perro
+◦	Delete constructor from class Perro
+◦	Delete empty constructor from class perro
+◦	Delete Method Multiplication from class perro
+◦	Add toString to class Perro
+◦	Delete toString to class Perro
+*/
+        else if(comp.contains("Add Method")){
+            String tokens8[]=ta_piz.getText().split(" ");
+            for (projectos c : clas) {
+                if (tokens8[6].equals(c.getClase())){
+                    String sedas=tokens8[2]+" "+tokens8[3]+" "+tokens8[4];
+                    c.setAtributos(sedas);
+                }
+            }          
+             mostrar_q.setText(clas.toString());
+            
+        }
+   
+        else if(comp.contains("Add Atribute to Method Addition")){
+            String tokens8[]=ta_piz.getText().split(" ");
+            for (projectos c : clas) {
+                if (tokens8[8].equals(c.getClase())){
+                    String sedas2=tokens8[5]+" "+tokens8[6];
+                    c.setAtributos(sedas2);
+                }
+            }          
+             mostrar_q.setText(clas.toString());
+            
+        }
+        else if(comp.contains("Modify Atribute from Method Addition")){
+            String tokens8[]=ta_piz.getText().split(" ");
+            for (projectos c : clas) {
+                if (tokens8[3].equals(c.getClase())){
+                    String sedas23=tokens8[5]+" "+tokens8[6]+" "+tokens8[7]+" "+tokens8[8]+" "+tokens8[9];
+                    c.setAtributos(sedas23);
+                }
+            }          
+             mostrar_q.setText(clas.toString());
+            
+        }
+        
+        
     }//GEN-LAST:event_Save_oMouseClicked
 
     private void LimpiarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LimpiarMouseClicked
